@@ -265,7 +265,7 @@ font-size: 17px;
     margin: 20px 0;
     line-height: 1.5;
     font-size: 16px;
-    font-style:normal;
+    font-style: normal;
 }
 .contact-info a {
     color: #fce138
@@ -282,7 +282,7 @@ font-size: 17px;
     flex: 1;
     margin: 15px;
 }
-.contact-info input, .contact-form text area {
+.contact-form input, .contact-form textarea {
 border: 1px solid #024e76;
 display: block;
 padding: 7px 15px;
