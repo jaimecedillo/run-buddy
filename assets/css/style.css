@@ -24,7 +24,7 @@ header h1 {
 }
 header a {
     text-decoration: none;
-    color:#fce138;
+    color: #fce138;
 }
 header nav {
     margin: 7px 0;
@@ -60,6 +60,9 @@ footer div {
 }
 footer a {
     color: #024e76
+}
+section {
+    padding: 60px;
 }
 /* hero style start */
 .hero{
@@ -116,14 +119,11 @@ footer a {
     line-height: 1.2;
 }
 .hero-cta h2 {
-    font-style:italic;
+    font-style: italic;
     font-size: 55px;
     color: #fce138;
 }
 /* hero styles end */
-.intro {
-    text-align: center;
-}
 /* .intro h2{
     font-size: 55px;
     color: #024e76;
@@ -155,11 +155,11 @@ footer a {
 .section-title {
     font-size: 48px;
     color: #024e76;
-    margin-bottom: 35px;
     padding-bottom: 20px;
     text-align: center;
     margin: 0 auto 35px auto;
     width: 50%;
+    border-bottom: 3px solid;
 }
 .primary-border {
     border-color: #fce138;
