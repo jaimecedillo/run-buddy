@@ -20,7 +20,6 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0;
     position: -webkit-sticky;
@@ -51,12 +50,19 @@ header nav ul {
     align-items: center;
     list-style: none;
 }
-header nav ul li a:hover {
+header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+header nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 15px;
+    text-shadow: none;
+  }
+/* header and navbar styles end */
 footer {
     background: var(--primary-color);
     width: 100%;
@@ -84,8 +90,7 @@ section {
 .hero{
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
-    background-position: center;
-    display:flex;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -95,7 +100,7 @@ section {
 /* hero style end */
 
 .hero-form{
-    border: 3px solidvar(--secondary-color);
+    border: 3px solid var(--secondary-color);
     background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
     color: var(--secondary-color);
@@ -129,13 +134,16 @@ section {
 .hero-form label {
     margin: 0 5px;
 }
-.hero-form button:hover {
+.hero-form button {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
+}
+.hero-form button:hover {
+    background-color: var(--tertiary-color);
 }
 .hero-cta {
     width: 35%;
@@ -154,9 +162,7 @@ section {
 .checkbox-wrapper input, .radio-wrapper input {
     opacity: 0;
 }
-.checkbox-wrapper input:checked, .radio-wrapper input:checked {
-    opacity: 1;
-}
+
 .checkbox-wrapper label, .radio-wrapper label {
     position: relative;
     left: 10px;
@@ -173,8 +179,11 @@ section {
     top: -4px;
     left: -30px;
 }
-.checkbox-wrapper input:checked + label::after,
-.radio-wrapper input:checked + label::after {
+.radio-wrapper label::before {
+    border-radius: 50%;
+}
+.checkbox-wrapper input + label::after,
+.radio-wrapper input + label::after {
     content:none;
 }
 .checkbox-wrapper input:checked + label::after,
@@ -191,7 +200,7 @@ section {
     position: absolute;
     left: -29px;
     top: -3px;
-    background-image: radial-gradient(circle, var(--tertiary-color), #024e76);
+    background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
 }
 .checkbox-wrapper label::after {
     content: "";
@@ -287,9 +296,11 @@ section {
 .step-img img {
     max-width: 100%;
 }
-.step:not(:last-child) {
-    border-bottom: 1px solid var(--tertiary-color);
+.step:last-child {
+    border-bottom: none;
 }
+/* what you do styles end */
+/* meet trainers */
 .trainer {
     margin: 20px;
     background: var(--secondary-color);
@@ -328,6 +339,7 @@ font-size: 17px;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+/* trainer styles end */
 /* reach out styles start */
 .contact {
     background: var(--secondary-color);
@@ -378,10 +390,11 @@ font-size: 17px;
     border-radius: 10px;
     background-color: rgba(255,255,255, 0.75);
 }
-.contact-form input:focus, .contact-form textarea {
-    background-color: rgba(255,255,255, 0.75);
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
-.contact-form button:hover {
+.contact-form button {
     width: 100%;
     border: none;
      background: var(--primary-color);
@@ -390,6 +403,10 @@ font-size: 17px;
      padding: 15px 0;
      font-size: 16px;
      border-radius: 10px;
+}
+.contact-form button:hover {
+     color: var(--primary-color);
+     background: var(--tertiary-color);
 }
 /* reach out styles end */
 
@@ -454,6 +471,9 @@ font-size: 17px;
     }
     .step-text {
         flex: 100%;
+    }
+    .trainer-bio h3, .trainer-bio h4 {
+        display: block;
     }
 }
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
